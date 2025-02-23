@@ -51,7 +51,7 @@
         }
   
         .product-card {
-          flex: 0 0 calc(100% / 6.5);
+          flex: 0 0 calc(100% / 7.3);
           position: relative;
           border-radius: 6px;
           overflow: hidden;
@@ -254,12 +254,11 @@
           }
         });
       });
-  
 
       document.querySelectorAll('.heart-button').forEach(button => {
         button.addEventListener('click', (e) => {
           e.preventDefault();
-          e.stopPropagation();
+
           const productId = button.dataset.id;
           const favorites = JSON.parse(localStorage.getItem(FAVORITES_KEY)) || {};
           
@@ -277,7 +276,7 @@
           }
         });
       });
-  
+      
 
       const slide = (direction) => {
         const container = document.querySelector('.carousel-container');
