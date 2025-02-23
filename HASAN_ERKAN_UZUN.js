@@ -245,8 +245,7 @@
       const prevButton = document.querySelector('.carousel-button.prev');
       const nextButton = document.querySelector('.carousel-button.next');
       let currentIndex = 0;
-  
-      // Product card click handler
+
       document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', (e) => {
           if (!e.target.closest('.heart-button')) {
@@ -256,7 +255,7 @@
         });
       });
   
-      // Favorite button click handler
+
       document.querySelectorAll('.heart-button').forEach(button => {
         button.addEventListener('click', (e) => {
           e.preventDefault();
@@ -279,7 +278,7 @@
         });
       });
   
-      // Slide navigation
+
       const slide = (direction) => {
         const container = document.querySelector('.carousel-container');
         const itemWidth = document.querySelector('.product-card').offsetWidth;
@@ -299,13 +298,11 @@
       prevButton.addEventListener('click', () => slide('prev'));
       nextButton.addEventListener('click', () => slide('next'));
   
-      // Keyboard navigation
       document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') slide('prev');
         if (e.key === 'ArrowRight') slide('next');
       });
   
-      // Touch support
       let touchStartX = 0;
       let touchEndX = 0;
   
